@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.sql.DataSource;
 
-import com.property.service.model.Kelurahan;
+import com.property.service.model.Pendidikan;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -12,7 +12,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class KelurahanJdbc {
+public class PendidikanJdbc {
 
     @Autowired
     private DataSource dataSource;
@@ -20,10 +20,10 @@ public class KelurahanJdbc {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    public List<Kelurahan> getKelurahan(){
-        String SQL = "select id_kelurahan as idKelurahan, nm_kelurahan as namaKelurahan from m_kelurahan";
-        List<Kelurahan> kel = jdbcTemplate.query(SQL, BeanPropertyRowMapper.newInstance(Kelurahan.class));
-        return kel;
+    public List<Pendidikan> getPendidikan(){
+        String SQL = "select kode_pendidikan as kodePendidikan, pendidikan from m_pendidikan";
+        List<Pendidikan> pend = jdbcTemplate.query(SQL, BeanPropertyRowMapper.newInstance(Pendidikan.class));
+        return pend;
     }
     
 }
