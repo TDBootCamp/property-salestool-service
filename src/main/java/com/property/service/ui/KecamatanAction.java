@@ -17,7 +17,7 @@ public class KecamatanAction {
     private KecamatanJdbc kecamatanJdbc;
 
     @GetMapping(path= "/api/listkecamatanjson")
-    public ResponseEntity<List<Kecamatan>> listKotaKabJson(){
+    public ResponseEntity<List<Kecamatan>> listKecamatanJson(){
         return ResponseEntity.ok().body(kecamatanJdbc.getKecamatan());
     }
 
