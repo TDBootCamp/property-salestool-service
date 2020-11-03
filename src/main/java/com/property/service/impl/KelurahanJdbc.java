@@ -20,10 +20,16 @@ public class KelurahanJdbc {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
+    // public List<Kelurahan> getKelurahan(){
+    //     String SQL = "select id_kelurahan as idKelurahan, nm_kelurahan as namaKelurahan from m_kelurahan";
+    //     List<Kelurahan> kel = jdbcTemplate.query(SQL, BeanPropertyRowMapper.newInstance(Kelurahan.class));
+    //     return kel;
+    // }
+
     public List<Kelurahan> getKelurahan(){
         String SQL = "select id_kelurahan as idKelurahan, nm_kelurahan as namaKelurahan from m_kelurahan";
-        List<Kelurahan> kel = jdbcTemplate.query(SQL, BeanPropertyRowMapper.newInstance(Kelurahan.class));
-        return kel;
+        List<Kelurahan> kec = jdbcTemplate.query(SQL, BeanPropertyRowMapper.newInstance(Kelurahan.class));
+        return kec;
     }
     
 }

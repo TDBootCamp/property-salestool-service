@@ -2,14 +2,14 @@ package com.property.service.model;
 
 public class Kelurahan {
 
-    private int idKelurahan;
+    private long idKelurahan;
     private String namaKelurahan;
 
-    public int getIdKelurahan() {
+    public long getIdKelurahan() {
         return this.idKelurahan;
     }
 
-    public void setIdKelurahan(int idKelurahan) {
+    public void setIdKelurahan(long idKelurahan) {
         this.idKelurahan = idKelurahan;
     }
 
