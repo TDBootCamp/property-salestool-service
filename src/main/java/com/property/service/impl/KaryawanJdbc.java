@@ -34,9 +34,9 @@ public class KaryawanJdbc {
     public void insertKaryawan(Karyawan karyawan){
         String sql = "insert into m_karyawan (id,id_entry,d_entry,kode_npk,nama_jabatan,tanggal_masuk_staff,id_kantor," +
                      "id_department,nomor_induk_kependudukan,nomor_telepon,alamat_email,alamat_tinggal,kota_lahir,kode_marketing) " +
-                     "values (?,?,'2017-04-11 13:27:12',?,?,'2017-04-11 13:27:12',?,5,?,?,?,?,?,?)";
+                     "values (?,?,'2017-04-11 13:27:12',?,?,'2017-04-11 13:27:12',?,?,?,?,?,?,?,?)";
         Object param[] = {karyawan.getIdKaryawan(), "admin_ultra", karyawan.getKodeNpk(), karyawan.getNamaKaryawan(), karyawan.getIdKantor(),
-                          karyawan.getNik(), karyawan.getNoTelp(),
+                          karyawan.getIdDepartmen(),karyawan.getNik(), karyawan.getNoTelp(),
                           karyawan.getEmail(),karyawan.getAlamatTinggal(), karyawan.getKotaLahir(), karyawan.getKodeMarketing()};
         jdbcTemplate.update(sql, param);
     }
