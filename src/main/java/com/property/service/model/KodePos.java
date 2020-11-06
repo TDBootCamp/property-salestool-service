@@ -2,13 +2,22 @@ package com.property.service.model;
 
 public class KodePos {
     
-    private int kodepos;
+    private int idKodePos;
+    private String kodepos;
 
-    public int getKodepos() {
+    public int getIdKodePos() {
+        return this.idKodePos;
+    }
+
+    public void setIdKodePos(int idKodePos) {
+        this.idKodePos = idKodePos;
+    }
+
+    public String getKodepos() {
         return this.kodepos;
     }
 
-    public void setKodepos(int kodepos) {
+    public void setKodepos(String kodepos) {
         this.kodepos = kodepos;
     }
 

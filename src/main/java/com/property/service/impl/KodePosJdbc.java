@@ -21,7 +21,7 @@ public class KodePosJdbc {
     private JdbcTemplate jdbcTemplate;
 
     public List<KodePos> getKodePos(){
-        String SQL = "select kodepos from m_kode_pos";
+        String SQL = "select id as idKodePos, kodepos from m_kode_pos";
         List<KodePos> pos = jdbcTemplate.query(SQL, BeanPropertyRowMapper.newInstance(KodePos.class));
         return pos;
     }
